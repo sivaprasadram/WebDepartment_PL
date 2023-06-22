@@ -1,0 +1,38 @@
+﻿@model List< DepartmentViewModels.ViewModels.DepartmentViewModel>
+
+@{
+    ViewData["Title"] = "Department Page";
+}
+
+<div>
+    @Html.ActionLink("Add Department","CreateDepartment")
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">DepartmentName</th>
+            <th scope="col">DepartmentCode</th>
+            <th scope="col">DepartmentLocation</th>
+            <th scope="col">DepartmentEmail</th>
+            <th scope="col">Isactive</th>
+            <th scope="col">Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var DepartmentViewModel in Model)
+        {
+            <tr>
+                <th scope="row">@DepartmentViewModel.DepartmentName</th>
+                <td>@DepartmentViewModel.DepatmentCode</td>
+                <td>@DepartmentViewModel.DepartmentLocaton</td>
+                <td>@DepartmentViewModel.DepartmentEmail</td>
+                <td>@DepartmentViewModel.Isactive</td>
+                <td>@Html.ActionLink( "Edit", "EditDepartment",new {Id=DepartmentViewModel.DeptId})|@Html.ActionLink("Delete","DeleteDepartment",new {Id=DepartmentViewModel.DeptId})</td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>

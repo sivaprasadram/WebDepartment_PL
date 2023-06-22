@@ -1,0 +1,43 @@
+﻿@model  DepartmentViewModels.ViewModels.DepartmentViewModel 
+
+@{
+    ViewData["Title"] = "Edit Department";
+}
+<form method="post" action="/Department/UpdateDepartment" >
+    <div>
+
+         <div>
+            @Html.TextBoxFor(e=>e.DeptId,new { @readonly = "readonly", @hidden="true"})
+         </div>
+         
+        <div>
+            @Html.LabelFor( e=>e.DepartmentName)
+            @Html.TextBoxFor(e=>e.DepartmentName)
+        </div>
+
+        <div>
+            @Html.LabelFor( e=>e.DepatmentCode)
+            @Html.TextBoxFor(e=>e.DepatmentCode)
+        </div>
+
+        <div>
+            @Html.LabelFor( e=>e.DepartmentEmail)
+            @Html.TextBoxFor(e=>e.DepartmentEmail)
+        </div>
+
+        <div>
+            @Html.LabelFor( e=>e.Isactive)
+            @Html.TextBoxFor(e=>e.Isactive)
+        </div>
+
+        <div>
+            @Html.LabelFor( e=>e.DepartmentLocaton)
+            @Html.TextBoxFor(e=>e.DepartmentLocaton)
+        </div>
+        <div>
+            <input type="submit" value="Update"/>
+        </div>
+
+    </div>
+
+</form>

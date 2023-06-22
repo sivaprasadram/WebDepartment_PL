@@ -1,0 +1,40 @@
+﻿@model DepartmentViewModels.ViewModels.DepartmentViewModel
+
+@{
+    ViewData["Title"] = "Create Department";
+}
+<form method="post">
+    <div>
+
+        <div>
+            @Html.LabelFor( e=>e.DepartmentName)
+            @Html.TextBoxFor(e=>e.DepartmentName)
+        </div>
+
+        <div>
+            @Html.LabelFor( e=>e.DepatmentCode)
+            @Html.TextBoxFor(e=>e.DepatmentCode)
+        </div>
+
+        <div>
+            @Html.LabelFor( e=>e.DepartmentEmail)
+            @Html.TextBoxFor(e=>e.DepartmentEmail)
+        </div>
+
+        <div>
+            @Html.LabelFor( e=>e.Isactive)
+            @Html.TextBoxFor(e=>e.Isactive)
+        </div>
+
+        <div>
+            @Html.LabelFor( e=>e.DepartmentLocaton)
+            @Html.TextBoxFor(e=>e.DepartmentLocaton)
+        </div>
+        <div>
+            <input type="submit" value="Save"/>
+            <input type="reset" value="Reset"/>
+        </div>
+
+    </div>
+
+</form>
